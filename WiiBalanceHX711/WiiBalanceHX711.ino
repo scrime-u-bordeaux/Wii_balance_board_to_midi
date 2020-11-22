@@ -101,8 +101,8 @@ void loop() {
   static boolean newDataReady = 0;
   const int serialPrintInterval = 50; //increase value to slow down serial print activity
   if (millis() > t + serialPrintInterval) {
-    int Xglobal = 4096+(data1+data4)-(data2+data3);
-    int Yglobal =4096+(data1 + data2) - (data3 + data4);
+    int Xglobal = (data1+data4)-(data2+data3);
+    int Yglobal = (data1 + data2) - (data3 + data4);
     int total = (data1+data2+data3+data4);
     Serial.print(Xglobal); Serial.print("\t");
     Serial.print(Yglobal); Serial.print("\t");
